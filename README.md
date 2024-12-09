@@ -11,7 +11,7 @@ This project consists of a Django backend and a React frontend, where the backen
 ## Demo
 
 Ranking Page
-![Ranking Page](./ranking.png)
+![Ranking Page](./hall.png)
 
 Usuarios Page
 ![Usuarios Page](./users.png)
