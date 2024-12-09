@@ -42,9 +42,9 @@ Usuarios Page
 
 ### API Endpoints
 
-GET `admin/` - Admin panel for managing the database.
-GET `ranking/` - List of all players with their scores ordered by score and time of last submission.
-GET `usuarios/` - List of all users and the groups they belong to.
+- GET `admin/` - Admin panel for managing the database.
+- GET `ranking/` - List of all players with their scores ordered by score and time of last submission.
+- GET `usuarios/` - List of all users and the groups they belong to.
 
 ---
 
