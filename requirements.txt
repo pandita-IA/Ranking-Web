@@ -1,0 +1,15 @@
+arcade==2.6.17
+asgiref==3.8.1
+attrs==24.2.0
+cffi==1.17.1
+Django==5.1.4
+django-cors-headers==4.6.0
+django-extensions==3.2.3
+djangorestframework==3.15.2
+Pillow==9.3.0
+pycparser==2.22
+pyglet==2.0.dev23
+pymunk==6.4.0
+pytiled-parser==2.2.0
+sqlparse==0.5.2
+typing_extensions==4.12.2

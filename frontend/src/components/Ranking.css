@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #1a1a2e;
+  --secondary-color: #16213e;
+  --accent-color: #0f3460;
+  --text-color: #e94560;
+  --gold: #ffd700;
+  --silver: #c0c0c0;
+  --bronze: #cd7f32;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.epic-ranking-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.epic-header {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.epic-title {
+  font-size: 3rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--text-color);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--text-color), 0 0 20px var(--text-color);
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--text-color), 0 0 40px var(--text-color);
+  }
+}
+
+.epic-main {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-x: auto;
+}
+
+.epic-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+.epic-table th {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 1rem;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.epic-row {
+  background-color: var(--secondary-color);
+  transition: transform 0.3s ease;
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.epic-row:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(233, 69, 96, 0.5);
+}
+
+.epic-row td {
+  padding: 1rem;
+}
+
+.epic-rank {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.rank-number {
+  position: relative;
+  z-index: 1;
+}
+
+.trophy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.trophy-1 {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffd700"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg>');
+}
+
+.trophy-2 {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23c0c0c0"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg>');
+}
+
+.trophy-3 {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23cd7f32"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H7v2h10v-2h-4v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg>');
+}
+
+.epic-score {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--gold);
+}
+
+.champions-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.champion-name {
+  opacity: 0;
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 50px;
+  color: var(--text-color);
+}
+
+.error {
+  color: #ff4136;
+}
+
+@media (max-width: 768px) {
+  .epic-title {
+    font-size: 2rem;
+  }
+
+  .epic-table th,
+  .epic-table td {
+    padding: 0.5rem;
+  }
+
+  .epic-rank {
+    font-size: 1.2rem;
+  }
+
+  .epic-score {
+    font-size: 1rem;
+  }
+}
+
